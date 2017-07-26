@@ -1,0 +1,39 @@
+{
+    "name": "mongodb-nodejs-refs",
+    "version": "1.0.0",
+    "description": "Conectar MongoDB con Nodejs ES6",
+    "main": "server.js",
+    "scripts": {
+        "build": "rm -rf dist && babel ./ --out-dir dist --ignore 'node_modules'",
+        "start": "nodemon --exec babel-node --presets=env -- server.js",
+        "prod": "NODE_ENV=production pm2 start dist/server.js"
+    },
+    "keywords": [
+        "nodejs",
+        "mongodb",
+        "es6",
+        "mongoose"
+    ],
+    "author": "Antonio Orozco",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt-nodejs": "0.0.3",
+        "body-parser": "^1.17.2",
+        "compression": "^1.7.0",
+        "cors": "^2.8.3",
+        "express": "^4.15.3",
+        "express-session": "^1.15.3",
+        "http": "0.0.0",
+        "mongoose": "^4.11.1"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.24.1",
+        "babel-preset-env": "^1.6.0",
+        "nodemon": "^1.11.0"
+    },
+    "babel": {
+        "presets": [
+            "env"
+        ]
+    }
+}
